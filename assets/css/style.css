@@ -34,12 +34,11 @@
     1. COMMON css 
 ===========================*/
 /* خط @font-face برای Azarmehr حذف شد */
-@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"); /* تغییر از Vazirmatn به Vazirmatn */
 @font-face {
     font-family: 'Azarmehr';
     src: url('../fonts/AzarMehr-VF-FD.woff2') format('woff2-variations');
 }    
-
+@import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap"); /* تغییر از Vazirmatn به Vazirmatn */
 body {
   text-align: right;
   direction: rtl;
@@ -80,14 +79,14 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Vazirmatn", "AzarMehr" , sans-serif;
-  font-weight: 800;
+  font-family: "Vazirmatn", sans-serif;
+  font-weight: 700;
   color: #252c41;
   margin: 0px; }
 
 h1 {
   font-size: 48px;
-  line-height: 1.2; /* 1.2 برابر اندازه فونت */
+  line-height: 1.4; /* 1.2 برابر اندازه فونت */
   margin-bottom: 20px; /* فاصله از پایین */
 }
 
@@ -122,7 +121,7 @@ h6 {
 }
 
 /* برای پاراگراف‌ها (اگر تعریف نشده) جهت خوانایی بهتر */
-p {	
+p {
   line-height: 1.7; /* برای متن اصلی، مقدار بزرگتر برای خوانایی بهتر */
   margin-bottom: 15px; /* فاصله بین پاراگراف‌ها */
 }
@@ -160,7 +159,7 @@ p {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  border: 5;
+  border: 0;
   padding: 0 48px;
   font-size: 14px;
   line-height: 52px;
@@ -294,7 +293,7 @@ p {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2); }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .header-nav {
-      padding: 10px 0; } }
+      padding: 20px 0; } }
   @media (max-width: 767px) {
     .header-nav {
       padding: 15px 0; } }
@@ -1477,7 +1476,7 @@ p {
           left: auto;
           right: 260px; } }
       .about-area .about-thumb .about-thumb-1 img {
-        shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1); }
+        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1); }
     .about-area .about-thumb .about-thumb-2 {
       position: absolute;
       right: -50px;
@@ -1551,10 +1550,10 @@ p {
     animation: bubbleMover linear infinite 12s; }
     @media only screen and (min-width: 1200px) and (max-width: 1600px) {
       .business-area .business-shape {
-        right: 25px; } }
+        right: 30px; } }
     @media (max-width: 767px) {
       .business-area .business-shape {
-        right: 25px; } }
+        right: 30px; } }
   @media (max-width: 767px) {
     .business-area .business-content .row {
       margin-left: 0; } }
@@ -1612,8 +1611,7 @@ p {
       .business-area .business-thumb {
         display: none; } }
     .business-area .business-thumb img {
-      width: 90%;
-      border-top-right-radius: 35px; }
+      width: 90%; }
       @media only screen and (min-width: 1200px) and (max-width: 1600px) {
         .business-area .business-thumb img {
           width: 65%; } }
@@ -1692,8 +1690,7 @@ p {
           width: 60%; } }
       @media only screen and (min-width: 768px) and (max-width: 991px) {
         .customers-area .customers-shape img {
-          width: 70%; 
-          margin-top: 300px;} }
+          width: 70%; } }
   .customers-area .customers-shape-1 {
     position: absolute;
     right: 90px;
@@ -1970,7 +1967,7 @@ p {
   margin: 0;
   color: #252c41;
   font-size: 60px;
-  font-weight: 800;
+  font-weight: 400;
   position: relative;
   line-height: 1em;
   -webkit-transition: all 500ms;
@@ -1979,7 +1976,7 @@ p {
 .pricing-one__single p {
   margin: 0;
   font-size: 16px;
-  font-weight: 600;
+  font-weight: 400;
   color: #ff8313;
   position: relative;
   margin-bottom: 5px;
@@ -1989,20 +1986,6 @@ p {
   letter-spacing: 0;
   text-transform: uppercase;
   padding-top: 27px; }
-
-.pricing-one__single h5 {
-  margin: 0;
-  font-size: 32px;
-  font-weight: 700;
-  color: #ff8313;
-  position: relative;
-  margin-bottom: 10px;
-  line-height: 1.6em;
-  -webkit-transition: all 500ms ease;
-  transition: all 500ms ease;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  padding-top: 37px; }
 
 .pricing-one__single a {
   margin-top: 47px; }
@@ -2850,10 +2833,10 @@ p {
   margin-bottom: 50px; }
   @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .blog-author {
-      padding: 20px; } }
+      padding: 30px; } }
   @media (max-width: 767px) {
     .blog-author {
-      padding: 0px;
+      padding: 20px;
       display: block; } }
   @media only screen and (min-width: 576px) and (max-width: 767px) {
     .blog-author {
@@ -2864,7 +2847,7 @@ p {
   border-radius: 5px; }
 
 .blog-author__content {
-  padding-right: 20px; }
+  padding-right: 40px; }
   @media (max-width: 767px) {
     .blog-author__content {
       padding-right: 0;
@@ -3383,6 +3366,7 @@ p {
       padding-left: 0; } }
 .footer-widget-about ul li {
   display: inline-block;
+  display: inline-block;
   margin-right: 3px; }
   .footer-widget-about ul li a {
     height: 45px;
@@ -3455,7 +3439,6 @@ p {
   .footer-widget-list .list-item .item ul li a {
     color: #b2b6c4;
     line-height: 40px;
-    padding-left: 65px;
     -webkit-transition: all 0.3s ease-out 0s;
     -moz-transition: all 0.3s ease-out 0s;
     -ms-transition: all 0.3s ease-out 0s;
@@ -3468,13 +3451,12 @@ p {
     color: #b2b6c4;
     line-height: 40px;
     position: relative;
-    padding-left: 80px; }
+    padding-left: 24px; }
     .footer-widget-list .list-item .item ul li span i {
       color: #ff8313;
       position: absolute;
       left: 0;
-      top: 14px;
-      padding-left: 40px; }
+      top: 14px; }
 
 .footer-widget-newsletter .title {
   padding-top: 12px;
@@ -3482,13 +3464,12 @@ p {
   font-size: 20px;
   font-weight: 700;
   text-transform: capitalize;
-  padding-bottom: 34px;
-  padding-left: 80px; }
+  padding-bottom: 34px; }
 .footer-widget-newsletter .input-box {
   position: relative; }
   .footer-widget-newsletter .input-box i {
     position: absolute;
-    right: 25px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     color: #ff8313; }
@@ -3505,8 +3486,7 @@ p {
 .footer-widget-newsletter p {
   color: #b2b6c4;
   line-height: 32px;
-  padding-top: 22px;
-  padding-left: 80px; }
+  padding-top: 22px; }
 
 /*===== Go Top =====*/
 .go-top-area {

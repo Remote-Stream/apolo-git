@@ -86,7 +86,7 @@ h6 {
 
 h1 {
   font-size: 48px;
-  line-height: 1.4; /* 1.2 برابر اندازه فونت */
+  line-height: 1.2; /* 1.2 برابر اندازه فونت */
   margin-bottom: 20px; /* فاصله از پایین */
 }
 
@@ -121,7 +121,7 @@ h6 {
 }
 
 /* برای پاراگراف‌ها (اگر تعریف نشده) جهت خوانایی بهتر */
-p {
+p {	
   line-height: 1.7; /* برای متن اصلی، مقدار بزرگتر برای خوانایی بهتر */
   margin-bottom: 15px; /* فاصله بین پاراگراف‌ها */
 }
@@ -1475,8 +1475,7 @@ p {
         .about-area .about-thumb .about-thumb-1 {
           left: auto;
           right: 260px; } }
-      .about-area .about-thumb .about-thumb-1 img {
-        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1); }
+
     .about-area .about-thumb .about-thumb-2 {
       position: absolute;
       right: -50px;
@@ -1550,10 +1549,10 @@ p {
     animation: bubbleMover linear infinite 12s; }
     @media only screen and (min-width: 1200px) and (max-width: 1600px) {
       .business-area .business-shape {
-        right: 30px; } }
+        right: 25px; } }
     @media (max-width: 767px) {
       .business-area .business-shape {
-        right: 30px; } }
+        right: 25px; } }
   @media (max-width: 767px) {
     .business-area .business-content .row {
       margin-left: 0; } }
@@ -1967,7 +1966,7 @@ p {
   margin: 0;
   color: #252c41;
   font-size: 60px;
-  font-weight: 400;
+  font-weight: 800;
   position: relative;
   line-height: 1em;
   -webkit-transition: all 500ms;
@@ -1976,7 +1975,7 @@ p {
 .pricing-one__single p {
   margin: 0;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 600;
   color: #ff8313;
   position: relative;
   margin-bottom: 5px;
@@ -1986,6 +1985,20 @@ p {
   letter-spacing: 0;
   text-transform: uppercase;
   padding-top: 27px; }
+
+.pricing-one__single h5 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #ff8313;
+  position: relative;
+  margin-bottom: 10px;
+  line-height: 1.6em;
+  -webkit-transition: all 500ms ease;
+  transition: all 500ms ease;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  padding-top: 37px; }
 
 .pricing-one__single a {
   margin-top: 47px; }
@@ -3731,4 +3744,111 @@ right: unset;
 }
 .main-btn{
   float: right!important;
+}
+
+.banner-area .banner-circle-1,
+.banner-area .banner-circle-2,
+.banner-area .banner-circle-3,
+.banner-area .banner-circle-4 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure text stays within circle boundaries */
+}
+
+.banner-area .circle-text {
+  font-family: "Azarmehr", sans-serif;
+  font-variation-settings: "wght" 700; /* Matches h2 weight */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+  position: absolute; /* Absolute positioning for precise centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center text exactly */
+  z-index: 1;
+  animation: inherit; /* Inherit parent's animation for synchronized movement */
+  pointer-events: none; /* Prevent text from interfering with interactions */
+  line-height: 1; /* Prevent extra vertical spacing */
+  margin: 0;
+}
+
+/* Adjust font size based on circle dimensions */
+.banner-area .banner-circle-1 .circle-text {
+  font-size: 28px; /* For 150x150px circle */
+  animation: bubbleMover1 linear infinite 5s; /* Match banner-circle-1 animation */
+}
+
+.banner-area .banner-circle-2 .circle-text {
+  font-size: 18px; /* For 100x100px circle */
+  animation: mapMover linear infinite 5s; /* Match banner-circle-2 animation */
+}
+
+.banner-area .banner-circle-3 .circle-text {
+  font-size: 16px; /* For 75x75px circle */
+  animation: bubbleMover linear infinite 5s; /* Match banner-circle-3 animation */
+}
+
+.banner-area .banner-circle-4 .circle-text {
+  font-size: 24px; /* For 150x150px circle */
+  animation: mapMover linear infinite 12s; /* Match banner-circle-4 animation */
+}
+@media (max-width: 767px) {
+  .banner-area .circle-text {
+    font-size: 14px; /* Smaller font size for mobile */
+  }
+}
+
+/* About Shapes Text Centering */
+.about-area .about-shape-1,
+.about-area .about-shape-3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure text stays within circle boundaries */
+}
+
+.about-area .circle-text {
+  font-family: "Azarmehr", sans-serif;
+  font-variation-settings: "wght" 700; /* Matches h2 weight */
+  color: #fff; /* White text for contrast */
+  text-align: center;
+  position: absolute; /* Absolute positioning for precise centering */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center text exactly */
+  z-index: 1;
+  animation: inherit; /* Inherit parent's animation for synchronized movement */
+  pointer-events: none; /* Prevent text from interfering with interactions */
+  line-height: 1; /* Prevent extra vertical spacing */
+  margin: 0;
+}
+
+/* Adjust font size based on circle dimensions */
+.about-area .about-shape-1 .circle-text {
+  font-size: 48px; /* For 335x335px circle */
+  animation: bubbleMover1 linear infinite 8s; /* Match about-shape-1 animation */
+}
+
+.about-area .about-shape-3 .circle-text {
+  font-size: 28px; /* For 230x230px circle */
+  animation: mapMover1 linear infinite 10s; /* Match about-shape-3 animation */
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .about-area .circle-text {
+    font-size: 16px; /* Smaller font size for mobile */
+  }
+  .about-area .about-shape-1 .circle-text {
+    font-size: 20px; /* Slightly larger for bigger circle */
+  }
+  .about-area .about-shape-3 .circle-text {
+    font-size: 18px; /* Adjusted for medium circle */
+  }
+}
+.business-shape {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Ensure text stays within circle boundaries */
 }

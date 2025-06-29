@@ -41,7 +41,7 @@
 body {
   text-align: right;
   direction: rtl;
-  font-family: "Roboto", sans-serif;
+  font-family: "Vazirmatn", sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #838999; }
@@ -78,22 +78,26 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Roboto", sans-serif;
+  font-family: "Vazirmatn", sans-serif;
   font-weight: 700;
   color: #252c41;
   margin: 0px; }
 
 h1 {
-  font-size: 48px; }
+  font-size: 48px;
+  line-height: 1.3; }
 
 h2 {
-  font-size: 36px; }
+  font-size: 36px;
+  line-height: 1.4; }
 
 h3 {
-  font-size: 28px; }
+  font-size: 28px;
+  line-height: 1.4; }
 
 h4 {
-  font-size: 22px; }
+  font-size: 22px;
+  line-height: 1.2; }
 
 h5 {
   font-size: 18px; }
@@ -396,7 +400,7 @@ p {
         transition: all 0.3s ease-out 0s;
         line-height: 115px;
         padding: 0 26px;
-        font-family: "Roboto", sans-serif; }
+        font-family: "Vazirmatn", sans-serif; }
         @media only screen and (min-width: 768px) and (max-width: 991px) {
           .header-nav .navigation .navbar .navbar-nav .nav-item a {
             color: #fff; } }
@@ -1451,14 +1455,15 @@ p {
           left: auto;
           right: 260px; } }
       .about-area .about-thumb .about-thumb-1 img {
-        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1); }
+        animation: mapMover linear infinite 12s;  }
     .about-area .about-thumb .about-thumb-2 {
       position: absolute;
-      right: -50px;
+      right: -15px;
       bottom: 215px;
       text-align: left; }
       .about-area .about-thumb .about-thumb-2 img {
-        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1); }
+        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1);
+        animation: ripple 2.6s ease-out infinite; }
     .about-area .about-thumb > img {
       box-shadow: 0px 0px 35px 0px rgba(37, 44, 75, 0.3); }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1586,7 +1591,8 @@ p {
       .business-area .business-thumb {
         display: none; } }
     .business-area .business-thumb img {
-      width: 90%; }
+      width: 90%;
+      border-top-right-radius: 20%; }
       @media only screen and (min-width: 1200px) and (max-width: 1600px) {
         .business-area .business-thumb img {
           width: 65%; } }
@@ -1941,26 +1947,37 @@ p {
 .pricing-one__single h3 {
   margin: 0;
   color: #252c41;
-  font-size: 60px;
-  font-weight: 400;
+  font-size: 48px;
+  font-weight: 900;
   position: relative;
   line-height: 1em;
   -webkit-transition: all 500ms;
   transition: all 500ms; }
 
+  .pricing-one__single h5 {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  color: #be5cbe;
+  font-size: 28px;
+  font-weight: 700;
+  position: relative;
+  line-height: 1.8em;
+  -webkit-transition: all 500ms;
+  transition: all 500ms; }
+
 .pricing-one__single p {
   margin: 0;
-  font-size: 16px;
-  font-weight: 400;
+  font-size: 32px;
+  font-weight: 600;
   color: #ff8313;
   position: relative;
-  margin-bottom: 5px;
-  line-height: 1em;
+  margin-bottom: 15px;
+  line-height: 1.6em;
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   letter-spacing: 0;
   text-transform: uppercase;
-  padding-top: 27px; }
+  padding-top: 37px; }
 
 .pricing-one__single a {
   margin-top: 47px; }
@@ -3706,4 +3723,137 @@ right: unset;
 }
 .main-btn{
   float: right!important;
+}
+
+.banner-circle-1,
+.banner-circle-2,
+.banner-circle-3,
+.banner-circle-4 {
+    /*
+     * We'll keep display: flex for general layout, but the absolute positioning
+     * on the child will handle the precise centering within the circle.
+     * Ensure these parent circles have a defined width and height, and border-radius: 50%
+     * to appear as circles. Also, they must have 'position: relative;' for
+     * the absolute positioning of the child text to work correctly within them.
+     */
+    display: flex; /* Enable flexbox for robust vertical and horizontal centering */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    text-align: center; /* Fallback for older browsers and general text alignment */
+    position: relative; /* Crucial for absolute positioning of child text */
+    /*
+     * Make sure any existing positioning (top, left, etc.) and size (width, height, border-radius)
+     * styles for these circles are already defined and are responsive if needed.
+     * These flexbox properties primarily help with the initial alignment,
+     * but absolute positioning takes precedence for perfect centering of the text.
+     */
+}
+
+/* Style for the text inside the first circle (banner-circle-1) */
+.banner-circle-1 .circle-text {
+    position: absolute; /* Position the text absolutely within its parent circle */
+    top: 50%; /* Move the top edge of the text to the vertical center of the circle */
+    left: 50%; /* Move the left edge of the text to the horizontal center of the circle */
+    transform: translate(-50%, -50%); /* Adjust the text back by half its own width and height */
+    display: block; /* Ensure the span behaves like a block for full centering effect */
+    color: #fff; /* Text color */
+    font-size: 26px; /* Base font size for larger display */
+    font-weight: 800; /* Font weight */
+    line-height: 1.2; /* Adjust line height for better appearance */
+    white-space: nowrap; /* Prevent text from wrapping unnecessarily, adjust if needed for longer text */
+    overflow: hidden; /* Hide overflow if text is too long */
+    text-overflow: ellipsis; /* Add ellipsis if text overflows */
+}
+
+/* Responsive adjustments for the first circle's text */
+@media (max-width: 992px) { /* Medium devices (tablets, 768px and up) */
+    .banner-circle-1 .circle-text {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 767px) { /* Small devices (landscape phones, 576px and up) */
+    .banner-circle-1 .circle-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 575px) { /* Extra small devices (portrait phones, less than 576px) */
+    .banner-circle-1 .circle-text {
+        font-size: 14px;
+        /* Further reduce font size if circles become very small on mobile */
+    }
+}
+
+
+/* Style for the text inside the other circles (banner-circle-2, 3, 4) */
+.banner-circle-2 .circle-text,
+.banner-circle-3 .circle-text,
+.banner-circle-4 .circle-text {
+    position: absolute; /* Position the text absolutely within its parent circle */
+    top: 50%; /* Move the top edge of the text to the vertical center of the circle */
+    left: 50%; /* Move the left edge of the text to the horizontal center of the circle */
+    transform: translate(-50%, -50%); /* Adjust the text back by half its own width and height */
+    display: block; /* Ensure the span behaves like a block for full centering effect */
+    color: #fff; /* Text color */
+    font-size: 16px; /* Base font size */
+    font-weight: 600; /* Font weight */
+    line-height: 1.2; /* Adjust line height */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive adjustments for the other circles' text */
+@media (max-width: 767px) {
+    .banner-circle-2 .circle-text,
+    .banner-circle-3 .circle-text,
+    .banner-circle-4 .circle-text {
+        font-size: 14px; /* Slightly reduce font size on smaller screens */
+    }
+}
+
+@media (max-width: 575px) {
+    .banner-circle-2 .circle-text,
+    .banner-circle-3 .circle-text,
+    .banner-circle-4 .circle-text {
+        font-size: 12px; /* Further reduce font size on very small screens */
+    }
+}
+.about-shape-1 .circle-text,
+.about-shape-3 .circle-text {
+    position: absolute; /* Position the text absolutely within its parent shape */
+    top: 50%; /* Move the top edge of the text to the vertical center */
+    left: 50%; /* Move the left edge of the text to the horizontal center */
+    transform: translate(-50%, -50%); /* Adjust text back by half its own width/height */
+    display: block; /* Ensure the span behaves like a block */
+    color: #fff; /* Example text color, adjust as needed */
+    font-size: 40px; /* Base font size for these texts */
+    font-weight: 800; /* Font weight */
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive adjustments for about-shape texts */
+@media (max-width: 992px) {
+    .about-shape-1 .circle-text,
+    .about-shape-3 .circle-text {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-shape-1 .circle-text,
+    .about-shape-3 .circle-text {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 575px) {
+    .about-shape-1 .circle-text,
+    .about-shape-3 .circle-text {
+        font-size: 14px;
+    }
 }

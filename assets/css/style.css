@@ -1462,7 +1462,7 @@ p {
       bottom: 215px;
       text-align: left; }
       .about-area .about-thumb .about-thumb-2 img {
-        box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.1);
+
         animation: ripple 2.6s ease-out infinite; }
     .about-area .about-thumb > img {
       box-shadow: 0px 0px 35px 0px rgba(37, 44, 75, 0.3); }
